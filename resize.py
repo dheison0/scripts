@@ -79,7 +79,7 @@ def convert(inputFile: str, output: str, size: Size):
 def parse_arguments():
     args = ArgumentParser(
         description="Resize images keeping the original aspect ratio",
-        epilog="if output is omited the original file will be replaced by the resized one"
+        epilog="if output is omitted the original file will be replaced by the resized one"
     )
     args.add_argument("target", help="output target size(i.e: 1080x720)")
     args.add_argument("input", help="input image")
