@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# Automaticaly set CPU governor based on power supply
 
+# Automaticaly set CPU governor based on power supply
+# > If the system is charging the governor will always be "performance"
+#   otherwise if battery is gran than 65% it will be "performance" too
+#   but if it's 25% or upper it will be "conservative" and if lower it
+#   will be "powersave"
 
 [[ "$(id -u)" != 0 ]] && echo "This script only runs as root" && exit 1
 
