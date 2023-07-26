@@ -61,7 +61,7 @@ def get_original_size(file: str) -> Size:
 
 def convert(inputFile: str, output: str, size: Size):
     logfile = tempfile.mktemp()
-    print(f"Converting {input} [→ {size}]...")
+    print(f"Converting {inputFile} [→ {size}]...")
     proc = os.popen(
         " ".join([
             "ffmpeg -y",
