@@ -39,7 +39,7 @@ function apply_config () {
   xfconf-query -c "xsettings" -p "/Gtk/CursorThemeName" -s "$CURSOR_THEME"
   xfconf-query -c "xfce4-desktop" -p "$MONITOR" -s "$WALLPAPER"
   if [ "$IS_DARK" = 1 ]; then
-    gsettings set org.gnome.desktop.interface color-scheme 'prefers-dark' &>/dev/null
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &>/dev/null
   else
     gsettings set org.gnome.desktop.interface color-scheme 'default' &>/dev/null
   fi
